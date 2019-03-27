@@ -1,0 +1,19 @@
+<H2>Listado de Noticias</H2>
+<div class="card-columns">
+	<div class="card bg-light mb-3" style="max-width: 18rem;" *ngFor="let noticia of noticias">
+		<div class="card-header" style="padding: 0.8rem 1rem 1rem;">
+			<button type="button" class="close" style="line-height: 0;" data-toggle="tooltip" data-placement="top" title="Eliminar Noticia" aria-label="Eliminar" (click)="delete(noticia.id)">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">{{noticia.titulo}}</h5>
+			<p class="card-text">{{noticia.descripcion}}</p>
+			<div class="btn-group mr-4" role="group">
+				<button type="button" class="btn btn-primary btn-sm" routerLink="/form/{{noticia.id}}" title="Editar Noticia">Editar</button>
+			</div>
+		</div>
+
+
+	</div>
+</div>

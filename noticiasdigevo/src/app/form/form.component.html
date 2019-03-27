@@ -1,0 +1,30 @@
+<h2>Crear Noticia</h2>
+<div>
+  <div class="form-group col-5" style="padding-left: 0px">
+    <label for="titulo">Título</label>
+    <input [(ngModel)]="noticia.titulo" type="text" class="form-control" id="titulo" placeholder="Ingresar Título">
+  </div>
+
+  <div class="form-group col-5" style="padding-left: 0px">
+    <label for="descripcion">Descripción</label>
+    <textarea [(ngModel)]="noticia.descripcion" class="form-control" id="descripcion" placeholder="Ingresar Descripción" maxlength="200"  rows="6"></textarea>
+  </div>
+<!--
+<div class="col-sm-4 well">
+    <form accept-charset="UTF-8" action="" method="POST">
+        <textarea class="form-control" id="text" name="text" placeholder="Type in your message" rows="5"></textarea>
+        <h6 class="pull-right" id="count_message"></h6>
+        <button class="btn btn-info" type="submit">Post New Message</button>
+    </form>
+</div>
+-->
+
+
+
+  <div class="btn-group mr-4" role="group">
+    <button (click)="grabarNoticia()" class="btn btn-primary">Grabar</button>
+  </div>
+  <div class="btn-group" role="group">
+    <button routerLink="/home" class="btn btn-secondary">Volver</button>
+  </div>
+</div>
